@@ -1,0 +1,566 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{04A8D56C-7DB7-4A7B-B94B-8469AFD3AEF2}</ProjectGuid>
+    <SccProjectName>SAK</SccProjectName>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccProvider>SAK</SccProvider>
+    <RootNamespace>Assignment3Project</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(SolutionDir)Assignment3(Project)\Dependencies\glew-2.1.0\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(SolutionDir)Assignment3(Project)\Dependencies\glew-2.1.0\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(SolutionDir)Assignment3(Project)\Dependencies\glew-2.1.0\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(SolutionDir)Assignment3(Project)\Dependencies\glew-2.1.0\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\Core\FileManegment\FileListener.cpp" />
+    <ClCompile Include="Source\Core\Graphics\Camera.cpp" />
+    <ClCompile Include="Source\Core\Graphics\Camera2D.cpp" />
+    <ClCompile Include="Source\Core\Graphics\Camera3D.cpp" />
+    <ClCompile Include="Source\Core\Graphics\Color.cpp" />
+    <ClCompile Include="Source\Core\Graphics\ColorF.cpp" />
+    <ClCompile Include="Source\Core\Graphics\DirectionalLight.cpp" />
+    <ClCompile Include="Source\Core\Graphics\Material.cpp" />
+    <ClCompile Include="Source\Core\Graphics\Mesh.cpp" />
+    <ClCompile Include="Source\Core\Graphics\MeshFactory.cpp" />
+    <ClCompile Include="Source\Core\Graphics\PBRMaterial.cpp" />
+    <ClCompile Include="Source\Core\Graphics\RenderManager.cpp" />
+    <ClCompile Include="Source\Core\Graphics\ShaderHelper\ShaderConverter.cpp" />
+    <ClCompile Include="Source\Core\Graphics\Terrain.cpp" />
+    <ClCompile Include="Source\Core\Input\KeyboardState.cpp" />
+    <ClCompile Include="Source\Core\Input\MouseState.cpp" />
+    <ClCompile Include="Source\Core\Math\MathUtilities.cpp" />
+    <ClCompile Include="Source\Core\Math\Matrix2.cpp" />
+    <ClCompile Include="Source\Core\Math\Matrix3.cpp" />
+    <ClCompile Include="Source\Core\Math\Matrix4.cpp" />
+    <ClCompile Include="Source\Core\Math\Point.cpp" />
+    <ClCompile Include="Source\Core\Math\Rectangle.cpp" />
+    <ClCompile Include="Source\Core\Math\Vector2.cpp" />
+    <ClCompile Include="Source\Core\Math\Vector3.cpp" />
+    <ClCompile Include="Source\Core\Math\Vector4.cpp" />
+    <ClCompile Include="Source\Core\Parsing\LoadTexture.cpp" />
+    <ClCompile Include="Source\Core\Physics\Transform3D.cpp" />
+    <ClCompile Include="Source\Core\Utilities\Clock.cpp" />
+    <ClCompile Include="Source\Core\Utilities\Random.cpp" />
+    <ClCompile Include="Source\Core\Utilities\Time.cpp" />
+    <ClCompile Include="Source\Core\Utilities\Utilities.cpp" />
+    <ClCompile Include="Source\Core\Window.cpp" />
+    <ClCompile Include="Source\D3D11\D3D11DepthBuffer.cpp" />
+    <ClCompile Include="Source\D3D11\D3D11FrameBuffer.cpp" />
+    <ClCompile Include="Source\D3D11\D3D11IndexBuffer.cpp" />
+    <ClCompile Include="Source\D3D11\D3D11InputLayout.cpp" />
+    <ClCompile Include="Source\D3D11\D3D11PipelineState.cpp" />
+    <ClCompile Include="Source\D3D11\D3D11RenderTarget2D.cpp" />
+    <ClCompile Include="Source\D3D11\D3D11RenderTargetDepth.cpp" />
+    <ClCompile Include="Source\D3D11\D3D11Shader.cpp" />
+    <ClCompile Include="Source\D3D11\D3D11DeviceContext.cpp" />
+    <ClCompile Include="Source\D3D11\D3D11Texture2D.cpp" />
+    <ClCompile Include="Source\D3D11\D3D11TextureCube.cpp" />
+    <ClCompile Include="Source\D3D11\D3D11UniformBuffer.cpp" />
+    <ClCompile Include="Source\D3D11\D3D11Utilities.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Source\Core\Parsing\OBJFormat.cpp" />
+    <ClCompile Include="Source\D3D11\D3D11VertexBuffer.cpp" />
+    <ClCompile Include="Source\OpenGL\GLDeviceContext.cpp" />
+    <ClCompile Include="Source\Core\Utilities\StringHelper.cpp" />
+    <ClCompile Include="Source\OpenGL\GLDepthBuffer.cpp" />
+    <ClCompile Include="Source\OpenGL\GLFrameBuffer.cpp" />
+    <ClCompile Include="Source\OpenGL\GLIndexBuffer.cpp" />
+    <ClCompile Include="Source\OpenGL\GLInputLayout.cpp" />
+    <ClCompile Include="Source\OpenGL\GLPipelineState.cpp" />
+    <ClCompile Include="Source\OpenGL\GLRenderTarget2D.cpp" />
+    <ClCompile Include="Source\OpenGL\GLRenderTargetDepth.cpp" />
+    <ClCompile Include="Source\OpenGL\GLShader.cpp" />
+    <ClCompile Include="Source\OpenGL\GLTexture2D.cpp" />
+    <ClCompile Include="Source\OpenGL\GLTextureCube.cpp" />
+    <ClCompile Include="Source\OpenGL\GLUniformBuffer.cpp" />
+    <ClCompile Include="Source\OpenGL\GLUtilities.cpp" />
+    <ClCompile Include="Source\OpenGL\GLVertexBuffer.cpp" />
+    <ClCompile Include="Source\Win32\Win32Create.cpp" />
+    <ClCompile Include="Source\Win32\Win32FileListener.cpp" />
+    <ClCompile Include="Source\Win32\Win32GLDeviceContext.cpp" />
+    <ClCompile Include="Source\Win32\Win32Input.cpp" />
+    <ClCompile Include="Source\Win32\Win32Utilities.cpp" />
+    <ClCompile Include="Source\Win32\Win32Window.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Dependencies\stb_image\stb_image.h" />
+    <ClInclude Include="Source\Core\FileManegment\FileListener.h" />
+    <ClInclude Include="Source\Core\FileManegment\IFileCallback.h" />
+    <ClInclude Include="Source\Core\Graphics\DeferredRenderer.h" />
+    <ClInclude Include="Source\Core\Graphics\API\IInputLayout.h" />
+    <ClInclude Include="Source\Core\Graphics\API\IResource.h" />
+    <ClInclude Include="Source\Core\Graphics\Camera.h" />
+    <ClInclude Include="Source\Core\Graphics\Camera2D.h" />
+    <ClInclude Include="Source\Core\Graphics\Camera3D.h" />
+    <ClInclude Include="Source\Core\Graphics\Color.h" />
+    <ClInclude Include="Source\Core\Graphics\ColorF.h" />
+    <ClInclude Include="Source\Core\Graphics\API\IDeviceContext.h" />
+    <ClInclude Include="Source\Core\Graphics\API\IDepthBuffer.h" />
+    <ClInclude Include="Source\Core\Graphics\DirectionalLight.h" />
+    <ClInclude Include="Source\Core\Graphics\API\IFrameBuffer.h" />
+    <ClInclude Include="Source\Core\Graphics\API\IIndexBuffer.h" />
+    <ClInclude Include="Source\Core\Graphics\API\ITextureCube.h" />
+    <ClInclude Include="Source\Core\Graphics\Material.h" />
+    <ClInclude Include="Source\Core\Graphics\Mesh.h" />
+    <ClInclude Include="Source\Core\Graphics\MeshFactory.h" />
+    <ClInclude Include="Source\Core\Graphics\ModelData.h" />
+    <ClInclude Include="Source\Core\Graphics\API\IPipelineState.h" />
+    <ClInclude Include="Source\Core\Graphics\PBRMaterial.h" />
+    <ClInclude Include="Source\Core\Graphics\RenderManager.h" />
+    <ClInclude Include="Source\Core\Graphics\API\IRenderTarget2D.h" />
+    <ClInclude Include="Source\Core\Graphics\API\IRenderTargetDepth.h" />
+    <ClInclude Include="Source\Core\Graphics\API\IShader.h" />
+    <ClInclude Include="Source\Core\Graphics\API\ITexture.h" />
+    <ClInclude Include="Source\Core\Graphics\API\ITexture2D.h" />
+    <ClInclude Include="Source\Core\Graphics\API\IUniformBuffer.h" />
+    <ClInclude Include="Source\Core\Graphics\API\IVertexBuffer.h" />
+    <ClInclude Include="Source\Core\Graphics\ShaderHelper\ShaderConverter.h" />
+    <ClInclude Include="Source\Core\Graphics\Terrain.h" />
+    <ClInclude Include="Source\Core\Input\KeyboardState.h" />
+    <ClInclude Include="Source\Core\Input\MouseState.h" />
+    <ClInclude Include="Source\Core\Math\Math.h" />
+    <ClInclude Include="Source\Core\Math\MathUtilities.h" />
+    <ClInclude Include="Source\Core\Math\Matrix2.h" />
+    <ClInclude Include="Source\Core\Math\Matrix3.h" />
+    <ClInclude Include="Source\Core\Math\Matrix4.h" />
+    <ClInclude Include="Source\Core\Math\Point.h" />
+    <ClInclude Include="Source\Core\Math\Rectangle.h" />
+    <ClInclude Include="Source\Core\Math\Vector2.h" />
+    <ClInclude Include="Source\Core\Math\Vector3.h" />
+    <ClInclude Include="Source\Core\Math\Vector4.h" />
+    <ClInclude Include="Source\Core\Memory\EngineObject.h" />
+    <ClInclude Include="Source\Core\Parsing\LoadTexture.h" />
+    <ClInclude Include="Source\Core\Physics\ITransformable3D.h" />
+    <ClInclude Include="Source\Core\Physics\Transform3D.h" />
+    <ClInclude Include="Source\Core\Utilities\Clock.h" />
+    <ClInclude Include="Source\Core\Utilities\Random.h" />
+    <ClInclude Include="Source\Core\Utilities\Time.h" />
+    <ClInclude Include="Source\Core\Utilities\Utilities.h" />
+    <ClInclude Include="Source\D3D11\D3D11DepthBuffer.h" />
+    <ClInclude Include="Source\D3D11\D3D11FrameBuffer.h" />
+    <ClInclude Include="Source\D3D11\D3D11IndexBuffer.h" />
+    <ClInclude Include="Source\D3D11\D3D11InputLayout.h" />
+    <ClInclude Include="Source\D3D11\D3D11PipelineState.h" />
+    <ClInclude Include="Source\D3D11\D3D11RenderTarget2D.h" />
+    <ClInclude Include="Source\D3D11\D3D11RenderTargetDepth.h" />
+    <ClInclude Include="Source\D3D11\D3D11Shader.h" />
+    <ClInclude Include="Source\D3D11\D3D11DeviceContext.h" />
+    <ClInclude Include="Source\D3D11\D3D11Texture2D.h" />
+    <ClInclude Include="Source\D3D11\D3D11TextureCube.h" />
+    <ClInclude Include="Source\D3D11\D3D11UniformBuffer.h" />
+    <ClInclude Include="Source\D3D11\D3D11Utilities.h" />
+    <ClInclude Include="Source\D3D11\D3D11VertexBuffer.h" />
+    <ClInclude Include="Source\Defines.h" />
+    <ClInclude Include="Source\Core\Window.h" />
+    <ClInclude Include="Dependencies\glew-2.1.0\include\GL\eglew.h" />
+    <ClInclude Include="Dependencies\glew-2.1.0\include\GL\glew.h" />
+    <ClInclude Include="Dependencies\glew-2.1.0\include\GL\glxew.h" />
+    <ClInclude Include="Dependencies\glew-2.1.0\include\GL\wglew.h" />
+    <ClInclude Include="Source\Core\Parsing\OBJFormat.h" />
+    <ClInclude Include="Source\OpenGL\GLDepthBuffer.h" />
+    <ClInclude Include="Source\OpenGL\GLFrameBuffer.h" />
+    <ClInclude Include="Source\OpenGL\GLDeviceContext.h" />
+    <ClInclude Include="Source\Core\Utilities\StringHelper.h" />
+    <ClInclude Include="Source\OpenGL\GLIndexBuffer.h" />
+    <ClInclude Include="Source\OpenGL\GLInputLayout.h" />
+    <ClInclude Include="Source\OpenGL\GLPipelineState.h" />
+    <ClInclude Include="Source\OpenGL\GLRenderTarget2D.h" />
+    <ClInclude Include="Source\OpenGL\GLRenderTargetDepth.h" />
+    <ClInclude Include="Source\OpenGL\GLShader.h" />
+    <ClInclude Include="Source\OpenGL\GLTexture2D.h" />
+    <ClInclude Include="Source\OpenGL\GLTextureCube.h" />
+    <ClInclude Include="Source\OpenGL\GLUniformBuffer.h" />
+    <ClInclude Include="Source\OpenGL\GLUtilities.h" />
+    <ClInclude Include="Source\OpenGL\GLVertexBuffer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ToDo.txt" />
+    <Text Include="Dependencies\glew-2.1.0\LICENSE.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Dependencies\glew-2.1.0\lib\Release\Win32\glew32.lib">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Library>
+    <Library Include="Dependencies\glew-2.1.0\lib\Release\Win32\glew32s.lib">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Library>
+    <Library Include="Dependencies\glew-2.1.0\lib\Release\x64\glew32.lib">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Library>
+    <Library Include="Dependencies\glew-2.1.0\lib\Release\x64\glew32s.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dependencies\glew-2.1.0\bin\Release\Win32\glew32.dll" />
+    <None Include="Dependencies\glew-2.1.0\bin\Release\Win32\glewinfo.exe" />
+    <None Include="Dependencies\glew-2.1.0\bin\Release\Win32\visualinfo.exe" />
+    <None Include="Dependencies\glew-2.1.0\bin\Release\x64\glew32.dll" />
+    <None Include="Dependencies\glew-2.1.0\bin\Release\x64\glewinfo.exe" />
+    <None Include="Dependencies\glew-2.1.0\bin\Release\x64\visualinfo.exe" />
+    <None Include="Meshes\plane.mtl" />
+    <None Include="Shaders\BackfaceCullingGS.glsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Shaders\DeferredPassPS.glsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Shaders\GlowPS.glsl" />
+    <None Include="Shaders\HDRGammaPassPS.glsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Shaders\PBRLightPassPS.glsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Shaders\ShadowPassPS.glsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Shaders\ShadowPassVS.glsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Shaders\DeferredPassVS.glsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Shaders\FullscreenQuadVS.glsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Shaders\TerrainDS.glsl" />
+    <None Include="Shaders\TerrainHS.glsl" />
+    <None Include="Shaders\TerrainPS.glsl" />
+    <None Include="Shaders\TerrainVS.glsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="Meshes\plane.obj">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Object>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Shaders\BackfaceCullingGS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Geometry</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Geometry</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Geometry</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Geometry</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4.0</ShaderModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="Shaders\DeferredPassPS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="Shaders\GlowPS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="Shaders\HDRGammaPassPS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="Shaders\FullscreenQuadVS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="Shaders\PBRLightPassPS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="Shaders\ShadowPassPS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="Shaders\ShadowPassVS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="Shaders\DeferredPassVS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="Shaders\TerrainDS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Domain</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Domain</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Domain</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Domain</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">5.0</ShaderModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="Shaders\TerrainHS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Hull</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Hull</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Hull</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Hull</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">5.0</ShaderModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="Shaders\TerrainPS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="Shaders\TerrainVS.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Textures\Arches\arches_0.png" />
+    <Image Include="Textures\Arches\arches_1.png" />
+    <Image Include="Textures\Arches\arches_10.png" />
+    <Image Include="Textures\Arches\arches_2.png" />
+    <Image Include="Textures\Arches\arches_3.png" />
+    <Image Include="Textures\Arches\arches_4.png" />
+    <Image Include="Textures\Arches\arches_5.png" />
+    <Image Include="Textures\Arches\arches_6.png" />
+    <Image Include="Textures\Arches\arches_7.png" />
+    <Image Include="Textures\Arches\arches_8.png" />
+    <Image Include="Textures\Arches\arches_9.png" />
+    <Image Include="Textures\Arches\arches_irrad.png" />
+    <Image Include="Textures\Brick\albedo.png" />
+    <Image Include="Textures\Brick\ao.png" />
+    <Image Include="Textures\Brick\height.png" />
+    <Image Include="Textures\Brick\metal.png" />
+    <Image Include="Textures\Brick\normal.png" />
+    <Image Include="Textures\Brick\roughness.png" />
+    <Image Include="Textures\Granit\albedo.png" />
+    <Image Include="Textures\Granit\ao.png" />
+    <Image Include="Textures\Granit\height.png" />
+    <Image Include="Textures\Granit\metal.png" />
+    <Image Include="Textures\Granit\normal.png" />
+    <Image Include="Textures\Granit\roughness.png" />
+    <Image Include="Textures\heightTerrain.png" />
+    <Image Include="Textures\integrationMap.png" />
+    <Image Include="Textures\Sand\albedo.tga" />
+    <Image Include="Textures\Sand\ao.tga" />
+    <Image Include="Textures\Sand\glossness.tga" />
+    <Image Include="Textures\Sand\height.tga" />
+    <Image Include="Textures\Sand\normal.tga" />
+    <Image Include="Textures\Sand\roughness.tga" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

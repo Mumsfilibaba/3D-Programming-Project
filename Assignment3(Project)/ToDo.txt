@@ -1,0 +1,91 @@
+TODO:
+--NEEDS TO BE IMPLEMENTED--
+-Perspective Camera (100%)
+-Uses textures (100%)
+-Shading (Ambient, diffuse and specular) (100%)
+-FPS-Camera (100%)
+-Using geometry shader (yes)
+
+--CORE (1st)--
+-Deferred Rendering (100%)
+
+--GEOMETRY (2st)--
+-Terrain rendering with, heightmap and displacement mapping + tesselation (100%)
+
+--TEXTURING AND LIGHTNING (1st)--
+-NormalMapping (100%)
+
+--PROJECTION (1st)--
+-Shadow-Mapping (100%)
+
+--ACCELERATION (2st)--
+-Geometry-Shader BackFaceCulling (100%)
+(IBL) (100%)
+
+--OTHER (2st)--
+-PBR (100%)
+-Parallax Mapping (100%)
+-Glow (100%)
+
+TODO:
+-Materials
+
+-WRITE REPORT
+
+-FileManager, Multiple FileListeners - NONTHREADED
+-FileListener, Multiple Callbacks per file - NONTHREADED
+-Input - ControllerState
+-Renderer
+-Lightpass
+-Z-Prepass
+-Application-Class
+-ITexture
+-IBuffer
+-Work on materials
+-Optimize binding
+-Z-Prepass
+-LightPass
+-Inverted depthbuffer (Better precision)
+
+-Create proper context (OPENGL)
+-Load Panoramas as cubemap (A renderpass at startup)
+-Generate integrationmap
+-Generate tangents Sphere
+-Generate UVs
+-Generate tangents function
+-Fix cylinders 
+-Fix pyramid
+
+-PipelineState - Blendstate
+-PipelineQueries
+
+-DeviceContext Wrapper
+-Seperate DeviceContext and Window
+
+OTHER:
+-VertexBuffer (100%)
+-IndexBuffer (100%)
+-UniformBuffer (100%)
+-RenderTarget2D (100%)
+-RenderTargetDepth(100%)
+-DepthBuffer (100%)
+-KeyboardState (100%)
+-MouseState (100%)
+-DomainShader (100%)
+-HullShader (100%)
+-FrameBufferClass (90%)
+-TextureCube (90%)
+-Texture2D (90%)
+-FileListener (80%)
+-Shaders (70%)
+-PiplineState (65%)
+-Mesh (60%)
+-FileManager (0%)
+-ControllerState (0%)
+
+TO REACH GOLD:
+-ShadowMapping all types of lights
+-SafeCode
+-DX-Call macro
+-PipelineStates - BlendStates
+-Log

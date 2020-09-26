@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{8FD4D378-5D8B-49E3-A7D6-03C4AE25B2A1}</ProjectGuid>
+    <SccProjectName>SAK</SccProjectName>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccProvider>SAK</SccProvider>
+    <RootNamespace>Engine</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(SolutionDir)Engine\Dependencies\glew-2.1.0\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Engine\Dependencies\glew-2.1.0\lib\Release\x64;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\D3D\Shaders\D3DEffect.h" />
+    <ClInclude Include="Source\Core\Graphics\Shaders\Effect.h" />
+    <ClInclude Include="Source\OpenGL\Buffers\GLVertexBuffer.h" />
+    <ClInclude Include="Source\OpenGL\Shaders\GLShader.h" />
+    <ClInclude Include="Source\D3D\Buffers\D3DVertexBuffer.h" />
+    <ClInclude Include="Source\D3D\Handles\D3DBufferHandle.h" />
+    <ClInclude Include="Source\D3D\Shaders\D3DShader.h" />
+    <ClInclude Include="Dependencies\glew-2.1.0\include\GL\eglew.h" />
+    <ClInclude Include="Dependencies\glew-2.1.0\include\GL\glew.h" />
+    <ClInclude Include="Dependencies\glew-2.1.0\include\GL\glxew.h" />
+    <ClInclude Include="Dependencies\glew-2.1.0\include\GL\wglew.h" />
+    <ClInclude Include="Source\Core\Graphics\Shaders\Shader.h" />
+    <ClInclude Include="Source\Core\Graphics\Textures\RenderBuffer.h" />
+    <ClInclude Include="Source\OpenGL\GLContext.h" />
+    <ClInclude Include="Source\D3D\D3DUtilities.h" />
+    <ClInclude Include="Source\D3D\D3DContext.h" />
+    <ClInclude Include="Include\Engine.h" />
+    <ClInclude Include="Source\Core\System\Input\Input.h" />
+    <ClInclude Include="Source\Core\Utilities\Clock.h" />
+    <ClInclude Include="Source\Core\Utilities\Random.h" />
+    <ClInclude Include="Source\Core\Graphics\Color.h" />
+    <ClInclude Include="Source\Core\Graphics\ColorF.h" />
+    <ClInclude Include="Source\Core\Math\Math.h" />
+    <ClInclude Include="Source\Core\Math\MathUtilities.h" />
+    <ClInclude Include="Source\Core\Math\Matrix2.h" />
+    <ClInclude Include="Source\Core\Math\Matrix3.h" />
+    <ClInclude Include="Source\Core\Math\Matrix4.h" />
+    <ClInclude Include="Source\Core\Math\Point.h" />
+    <ClInclude Include="Source\Core\Math\Rectangle.h" />
+    <ClInclude Include="Source\Core\Math\Vector2.h" />
+    <ClInclude Include="Source\Core\Math\Vector3.h" />
+    <ClInclude Include="Source\Core\Math\Vector4.h" />
+    <ClInclude Include="Source\Core\System\Application.h" />
+    <ClInclude Include="Source\Core\System\Context.h" />
+    <ClInclude Include="Source\Core\System\Input\ControllerHandle.h" />
+    <ClInclude Include="Source\Core\System\Input\Controller.h" />
+    <ClInclude Include="Source\Core\System\Input\Keyboard.h" />
+    <ClInclude Include="Source\Core\System\Input\Keycode.h" />
+    <ClInclude Include="Source\Core\System\Input\Mouse.h" />
+    <ClInclude Include="Source\Core\System\Window.h" />
+    <ClInclude Include="Source\Core\Utilities\Time.h" />
+    <ClInclude Include="Source\Core\Utilities\Utilities.h" />
+    <ClInclude Include="Source\D3D\Handles\D3DDepthStencilHandle.h" />
+    <ClInclude Include="Source\D3D\Handles\D3DRenderTargetHandle.h" />
+    <ClInclude Include="Source\D3D\Handles\D3DShaderResourceHandle.h" />
+    <ClInclude Include="Source\Defines.h" />
+    <ClInclude Include="Source\OpenGL\GLUtilities.h" />
+    <ClInclude Include="Source\Win32\Win32Keycode.h" />
+    <ClInclude Include="Source\Core\Graphics\Buffers\VertexBuffer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\D3D\Shaders\D3DEffect.cpp" />
+    <ClCompile Include="Source\OpenGL\Buffers\GLVertexBuffer.cpp" />
+    <ClCompile Include="Source\OpenGL\Shaders\GLShader.cpp" />
+    <ClCompile Include="Source\D3D\Buffers\D3DVertexBuffer.cpp" />
+    <ClCompile Include="Source\D3D\Handles\D3DBufferHandle.cpp" />
+    <ClCompile Include="Source\D3D\Shaders\D3DShader.cpp" />
+    <ClCompile Include="Source\OpenGL\GLContext.cpp" />
+    <ClCompile Include="Source\D3D\D3DUtilities.cpp" />
+    <ClCompile Include="Source\D3D\D3DContext.cpp" />
+    <ClCompile Include="Source\Core\Utilities\Clock.cpp" />
+    <ClCompile Include="Source\Core\Utilities\Random.cpp" />
+    <ClCompile Include="Source\Core\Graphics\Color.cpp" />
+    <ClCompile Include="Source\Core\Graphics\ColorF.cpp" />
+    <ClCompile Include="Source\Core\Math\MathUtilities.cpp" />
+    <ClCompile Include="Source\Core\Math\Matrix2.cpp" />
+    <ClCompile Include="Source\Core\Math\Matrix3.cpp" />
+    <ClCompile Include="Source\Core\Math\Matrix4.cpp" />
+    <ClCompile Include="Source\Core\Math\Point.cpp" />
+    <ClCompile Include="Source\Core\Math\Rectangle.cpp" />
+    <ClCompile Include="Source\Core\Math\Vector2.cpp" />
+    <ClCompile Include="Source\Core\Math\Vector3.cpp" />
+    <ClCompile Include="Source\Core\Math\Vector4.cpp" />
+    <ClCompile Include="Source\Core\System\Application.cpp" />
+    <ClCompile Include="Source\Core\System\Input\ControllerHandle.cpp" />
+    <ClCompile Include="Source\Core\System\Input\Controller.cpp" />
+    <ClCompile Include="Source\Core\System\Input\Keyboard.cpp" />
+    <ClCompile Include="Source\Core\System\Input\Mouse.cpp" />
+    <ClCompile Include="Source\Core\System\Window.cpp" />
+    <ClCompile Include="Source\Core\Utilities\Time.cpp" />
+    <ClCompile Include="Source\Core\Utilities\Utilities.cpp" />
+    <ClCompile Include="Source\D3D\Handles\D3DDepthStencilHandle.cpp" />
+    <ClCompile Include="Source\D3D\Handles\D3DRenderTargetHandle.cpp" />
+    <ClCompile Include="Source\D3D\Handles\D3DShaderResourceHandle.cpp" />
+    <ClCompile Include="Source\OpenGL\GLUtilities.cpp" />
+    <ClCompile Include="Source\Win32\Win32Create.cpp" />
+    <ClCompile Include="Source\Win32\Win32Input.cpp" />
+    <ClCompile Include="Source\Win32\Win32OpenGL.cpp" />
+    <ClCompile Include="Source\Win32\Win32Utilities.cpp" />
+    <ClCompile Include="Source\Win32\Win32Window.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Dependencies\glew-2.1.0\LICENSE.txt" />
+    <Text Include="Text.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Dependencies\glew-2.1.0\lib\Release\x64\glew32s.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
