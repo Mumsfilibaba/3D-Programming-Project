@@ -9,5 +9,6 @@ The application compiles for Windows and supports both DirectX 11 and OpenGL (Th
 * PCF Soft Shadows (Directional Light)
 * Deferred Rendering
 * Physically Based Rendering (With Image Based Lightning)
-* Tesselation for terrain (Used together with heightmapping)
-* Geometry Shader back face culling
+* Tesselation for terrain (Used together with heightmapping) in Domain- and Hull Shaders
+* Backface culling in Geometry Shader
+* Bloom
